@@ -7,7 +7,6 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <link href="./main.css" rel="stylesheet" />
-  <script src="./main.js"></script>
   
   <title>Todo app</title>
 </head>
@@ -18,14 +17,24 @@
       <button></button>
     </header>
     <main>
-      <form>
-        <input type="text" />
-        <input type="submit" />
-      </form>
-      <ul id="todo-list">
+      <div class="card">
+        <form>
+          <input type="text" />
+          <input type="submit" />
+        </form>
+      </div>
+      <div class="card">
+        <ul id="todo-list">
+        </ul>
 
-      </ul>
+        <footer>
+          <button id="show-all-btn"></button>
+          <button id="show-active-btn"></button>
+          <button id="show-completed-btn"></button>
+        </footer>
+      </div>
     </main>
   </div>
+  <script type="module" src="./main.js"></script>
 </body>
 </html>

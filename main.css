@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root {
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(236, 33%, 92%);
+    --light-grayish-blue: hsl(233, 11%, 84%);
+    --dark-grayish-blue: hsl(236, 9%, 61%);
+    --very-dark-grayish-blue: hsl(235, 19%, 35%);
+}
+
+* {
+    font-family: 'Josefin Sans', sans-serif;
+
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    border-bottom: 1px solid var(--light-grayish-blue);
+
+    display: flex;
+    padding: 12px 24px;
+}
+
+.task-text {
+    font-size: 24px;
+    width: 80%;
+
+    margin: 0px 12px;
+}
+
+.task-delete-button {
+    margin-left: auto;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -11,3 +51,15 @@ header {
     justify-content: space-between
 }
 
+.todo-container {
+    width: 700px;
+}
+
+footer {
+    display: flex;
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
