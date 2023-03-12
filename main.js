@@ -19,6 +19,17 @@ const fillTodoList = (todos) => {
     todos.map((todo) => {
         todoList.appendChild(createTodoLine(todo));
     })
+
+    updateActiveItemsCount();
+}
+
+const updateActiveItemsCount = () => {
+  const numOfActiveItems = todos.filter((todo) => todo.complete).length
+
+  console.log(numOfActiveItems + 'items left')
+  
+  const numOfActiveItemsText = document.getElementById('active-items-count');
+  numOfActiveItemsText.innerText = numOfActiveItems + ' items left';
 }
 
 const createTodoLine = (todo) => {
@@ -73,7 +84,30 @@ const toggleComplete = (id) => {
     if(todo.id == id)
       todo.complete = !todo.complete;
   })
+
+  updateActiveItemsCount();
 }
+
+// Form configuration
+
+const addNewTodo = (e) => {
+  e.preventDefault();
+
+  const taskDescriptionField = document.getElementById('task-description');
+
+  todos.push({
+    id: todos.length + 1,
+    task: taskDescriptionField.value,
+    complete: false
+  });
+
+  taskDescriptionField.value = '';
+
+  fillTodoList(todos);
+}
+
+const submitBtn = document.getElementById('submit-btn');
+submitBtn.addEventListener('click', addNewTodo);
 
 // Footer buttons configuration
 

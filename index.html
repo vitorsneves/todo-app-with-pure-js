@@ -14,13 +14,13 @@
   <div class="todo-container">
     <header class="teste">
       <h1>TODO</h1>
-      <button></button>
+      <button>dark mode</button>
     </header>
     <main>
       <div class="card">
         <form>
-          <input type="text" />
-          <input type="submit" />
+          <input type="text" id="task-description" />
+          <input id="submit-btn" type="submit" value='+' />
         </form>
       </div>
       <div class="card">
@@ -28,9 +28,13 @@
         </ul>
 
         <footer>
-          <button id="show-all-btn"></button>
-          <button id="show-active-btn"></button>
-          <button id="show-completed-btn"></button>
+          <p id="active-items-count"></p>
+          <div class="filter">
+            <button id="show-all-btn">All</button>
+            <button id="show-active-btn">Active</button>
+            <button id="show-completed-btn">Completed</button>
+          </div>
+          <button>Clear completed tasks</button>
         </footer>
       </div>
     </main>
