@@ -11,6 +11,7 @@
   <title>Todo app</title>
 </head>
 <body>
+  <div id="background"></div>
   <div class="todo-container">
     <header class="teste">
       <h1>TODO</h1>
@@ -30,11 +31,11 @@
         <footer>
           <p id="active-items-count"></p>
           <div class="filter">
-            <button id="show-all-btn">All</button>
-            <button id="show-active-btn">Active</button>
-            <button id="show-completed-btn">Completed</button>
+            <button class="transparent-btn selected-btn" id="show-all-btn">All</button>
+            <button class="transparent-btn" id="show-active-btn">Active</button>
+            <button class="transparent-btn" id="show-completed-btn">Completed</button>
           </div>
-          <button>Clear completed tasks</button>
+          <button class="transparent-btn" id="clear-completed-btn">Clear completed tasks</button>
         </footer>
       </div>
     </main>

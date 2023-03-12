@@ -15,6 +15,11 @@
   margin: 0;
 }
 
+h1 {
+  font-size: 52px;
+  color: var(--very-light-gray);
+}
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -37,6 +42,13 @@ li {
 
 .task-delete-button {
   margin-left: auto;
+  background-image: url(./images/icon-cross.svg);
+  background-repeat: no-repeat;
+  width: 50px;
+}
+
+.check-button {
+
 }
 
 body {
@@ -45,6 +57,11 @@ body {
   align-items: center;
 
   height: 100vh;
+
+  background-image: url(./images/bg-desktop-light.jpg);
+  background-repeat: no-repeat;
+  background-size: 100vw auto;
+  background-color: var(--very-light-gray);
 }
 
 header {
@@ -62,6 +79,7 @@ form {
 #task-description {
   border: none;
   font-size: 24px;
+  background-color: var(--very-light-gray);
 
   width: 100%;
 }
@@ -94,10 +112,26 @@ footer {
   padding: 12px 24px;
 }
 
+.transparent-btn {
+  background-color: transparent;
+  border: none
+}
+
 .card {
   border-radius: 12px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   overflow: hidden;
 
-  margin-top: 42px
+  margin-top: 42px;
+
+  background-color: var(--very-light-gray);
+}
+
+.selected-btn {
+  color: var(--dark-grayish-blue);
+  text-decoration: underline;
+}
+
+.completed-task > p {
+  text-decoration: line-through;
 }
