@@ -117,7 +117,7 @@ const addNewTodo = (e) => {
   const taskDescriptionField = document.getElementById('task-description');
 
   todos.push({
-    id: todos.length + 1,
+    id: getUniqueId(),
     task: taskDescriptionField.value,
     complete: false
   });
@@ -125,6 +125,14 @@ const addNewTodo = (e) => {
   taskDescriptionField.value = '';
 
   fillTodoList();
+}
+
+const getUniqueId = () => {
+  const maxId = todos.length > 0 
+    ? Math.max(...todos.map((todo) => todo.id))
+    : 0;
+
+  return maxId + 1;
 }
 
 const submitBtn = document.getElementById('submit-btn');
